@@ -1,0 +1,169 @@
+<div class="modal fade" id="addInternshipModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header shadow">
+        <h5 class="modal-title">Add Internship</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center pt-4">
+        <center>
+          <div
+            class="alert alert-danger text-center col-md-6"
+            role="alert"
+            id="addIntError"
+            style="display: none"
+          >
+            Unable to add! Please try again.
+          </div>
+        </center>
+        <form class="m-3" id="addInternshipForm">
+          <!-- Internship title field -->
+          <input
+            type="text"
+            class="form-control mb-3"
+            id="intTitle"
+            name="intTitle"
+            placeholder="Title"
+            required
+          />
+          <!-- Internship location field -->
+          <input
+            type="text"
+            class="form-control mb-3"
+            id="intLoc"
+            name="intLoc"
+            placeholder="Location"
+            required
+          />
+          <!-- Internship responsibilities field -->
+          <textarea
+            name="intResp"
+            id="intResp"
+            rows="3"
+            placeholder="Responsibilities"
+            class="form-control mb-3"
+            required
+          ></textarea>
+          <!-- Required skills field -->
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Skills Required"
+            name="intSkills"
+            id="intSkills"
+            aria-describedby="skillHelp"
+            required
+          />
+          <small
+            id="skillHelp"
+            class="form-text text-muted float-left mb-3 ml-1"
+          >
+            Enter comma-separated values e.g.: HTML,CSS,PHP,C
+          </small>
+          <!-- Last date to apply -->
+          <div
+            class="form-group mb-3"
+            data-toggle="tooltip"
+            data-placement="auto"
+            title="Last Date should be at least 3 days after the post date of internship"
+          >
+            <label for="intLastDate" class="float-left"
+              >Last date to apply</label
+            >
+            <input
+              type="date"
+              class="form-control"
+              id="intLastDate"
+              name="intLastDate"
+              required
+            />
+          </div>
+          <!-- Start Date -->
+          <div
+            class="form-group mb-3"
+            data-toggle="tooltip"
+            data-placement="auto"
+            title="Start Date should be at least 5 days after the post date of internship"
+          >
+            <label for="intStartDate" class="float-left">Start Date</label>
+            <input
+              type="date"
+              class="form-control"
+              id="intStartDate"
+              name="intStartDate"
+              placeholder="Cost"
+              required
+            />
+          </div>
+          <!-- Duration -->
+          <p class="float-left mb-1">Duration</p>
+          <div class="input-group mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="intDurNum"
+              name="intDurNum"
+              placeholder="Number of"
+              min="1"
+              value="1"
+              required
+            />
+            <select
+              name="intDurUnit"
+              id="intDurUnit"
+              class="form-control"
+              required
+            >
+              <option>Week(s)</option>
+              <option>Month(s)</option>
+            </select>
+          </div>
+          <!-- Stipend -->
+          <p class="float-left mb-1">Stipend</p>
+          <div class="input-group mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="intStipendNum"
+              name="intStipendNum"
+              placeholder="Stipend in ₹ per"
+              min="0"
+              value="0"
+              required
+            />
+            <select
+              name="intStipendUnit"
+              id="intStipendUnit"
+              class="form-control"
+              required
+            >
+              <option>/Week</option>
+              <option>/Month</option>
+            </select>
+          </div>
+
+          <!-- Hidden field which stores employer id -->
+          <input type="hidden" id="empId" name="empId" required />
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger mr-4" data-dismiss="modal">
+          Cancel
+        </button>
+        <input
+          type="submit"
+          class="btn btn-success"
+          value="Add Internship"
+          form="addInternshipForm"
+        />
+      </div>
+    </div>
+  </div>
+</div>

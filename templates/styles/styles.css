@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto");
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.navbar-brand {
+  font-family: Pacifico, cursive;
+  font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+#userDropDown {
+  background: #f0f1f1;
+  border-radius: 5px;
+}
+
+#userDropDown > .nav-link.dropdown-toggle {
+  color: black !important;
+}
+
+#showPwdBtn {
+  border: 1px solid #ced4da;
+}
+
+.card-title:hover > a {
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+}
