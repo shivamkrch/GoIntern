@@ -1,6 +1,6 @@
 {
-  "name": "FoodShala",
-  "description": "An online food ordering app",
+  "name": "GoIntern",
+  "description": "An online internship search app",
   "require": {
     "klein/klein": "^2.1"
   },
