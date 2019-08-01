@@ -8,9 +8,6 @@ $router = new Klein\Klein();
 
 // Home page route
 $router->respond('GET', '/', function($req, $res, $service){
-    if(isAuthenticated() && $_COOKIE['user-type'] == 'emp'){
-        header('location: /employer/internships');
-    }
     $service->render(__DIR__.'/templates/pages/home.php');
 });
 
